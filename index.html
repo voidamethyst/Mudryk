@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Михайло Мудрик | Український футболіст</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        :root {
+            --chelsea-blue: #034694;
+            --ukraine-yellow: #FFD700;
+            --ukraine-blue: #0057B8;
+        }
+
+        body {
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: var(--chelsea-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .header-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .hero {
+            position: relative;
+            height: 70vh;
+            background-color: #000;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background-color: #f5f5f5;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .gallery {
+            padding: 4rem 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .career {
+            padding: 4rem 2rem;
+        }
+
+        .career h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--chelsea-blue);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-left: 4px solid var(--chelsea-blue);
+            background: #f9f9f9;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .timeline-image {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .achievements {
+            background: linear-gradient(var(--ukraine-blue), var(--ukraine-yellow));
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .achievements h2 {
+            margin-bottom: 2rem;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .achievement-card {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .achievement-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="images/mudryk-profile.png" alt="Михайло Мудрик" class="header-image">
+        <div>
+            <h1>Михайло Мудрик</h1>
+            <p>Український футболіст | Гравець "Челсі" та збірної України</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="images/mudryk-hero.avif" alt="Михайло Мудрик на полі" class="hero-image">
+        <div class="hero-content">
+            <h1>Талант українського футболу</h1>
+            <p>Півзахисник, який підкорює світовий футбол</p>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <img src="images/mudryk-action1.webp" alt="Мудрик в дії" class="gallery-image">
+            <h3>Вік</h3>
+            <p>23 роки</p>
+        </div>
+        <div class="stat-card">
+            <img src="images/mudryk-chelsea.webp" alt="Мудрик у формі Челсі" class="gallery-image">
+            <h3>Клуб</h3>
+            <p>Челсі</p>
+        </div>
+        <div class="stat-card">
+            <img src="images/mudryk-dribbling.jpg_large" alt="Мудрик веде м'яч" class="gallery-image">
+            <h3>Амплуа</h3>
+            <p>Вінгер</p>
+        </div>
+        <div class="stat-card">
+            <img src="images/mudryk-number.webp" alt="Мудрик з номером 10" class="gallery-image">
+            <h3>Номер</h3>
+            <p>10</p>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <img src="images/mudryk-gallery1.webp" alt="Мудрик на тренуванні" class="gallery-image">
+            <img src="images/mudryk-gallery2.webp" alt="Мудрик святкує гол" class="gallery-image">
+            <img src="images/mudryk-gallery3.webp" alt="Мудрик з трофеєм" class="gallery-image">
+        </div>
+    </section>
+
+    <section class="career">
+        <h2>Кар'єрний шлях</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <img src="images/mudryk-chelsea-signing.webp" alt="Підписання контракту з Челсі" class="timeline-image">
+                <div>
+                    <h3>2022-2023</h3>
+                    <p>Трансфер до "Челсі" за рекордні для українського футболу 70 мільйонів фунтів</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="images/mudryk-shakhtar.jpg" alt="Мудрик у Шахтарі" class="timeline-image">
+                <div>
+                    <h3>2018-2022</h3>
+                    <p>Виступи за "Шахтар", становлення як професіонального гравця</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <img src="images/mudryk-academy.jpg" alt="Мудрик в академії" class="timeline-image">
+                <div>
+                    <h3>2016-2018</h3>
+                    <p>Академія "Шахтаря"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements">
+        <h2>Досягнення</h2>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <img src="images/mudryk-trophy1.jpg" alt="Мудрик з трофеєм чемпіонату" class="achievement-image">
+                <h3>Чемпіонат України</h3>
+                <p>Чемпіон України у складі "Шахтаря"</p>
+            </div>
+            <div class="achievement-card">
+                <img src="images/mudryk-ukraine.jpg" alt="Мудрик у збірній" class="achievement-image">
+                <h3>Збірна України</h3>
+                <p>Основний гравець національної збірної</p>
+            </div>
+            <div class="achievement-card">
+                <img src="images/mudryk-transfer.jpg" alt="Трансфер Мудрика" class="achievement-image">
+                <h3>Рекордний трансфер</h3>
+                <p>Найдорожчий український футболіст в історії</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Михайло Мудрик | Всі права захищені</p>
+    </footer>
+</body>
+</html>
